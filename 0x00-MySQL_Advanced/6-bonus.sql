@@ -2,9 +2,9 @@
 
 DELIMITER $$ ;
 CREATE PROCEDURE AddBonus(
-	IN user_id int,
-	IN score int,
-	IN project_name varchar(255)
+	IN user_id INTEGER,
+	IN score INTEGER,
+	IN project_name VARCHAR(255)
 )
 BEGIN
 	IF NOT EXISTS(SELECT name FROM projects WHERE name=project_name) THEN
