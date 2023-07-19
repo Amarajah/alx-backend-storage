@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""uses the requests module to obtain the HTML content of a particular URL and returns it."""
+"""uses the requests module to obtain the HTML content of
+a particular URL and returns it."""
 import redis
 import requests
 r = redis.Redis()
