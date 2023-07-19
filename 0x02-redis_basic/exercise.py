@@ -2,6 +2,7 @@
 """Create a Cache class."""
 import redis
 import uuid
+from functools import wraps
 from typing import Union, Callable, Optional, Any
 
 
