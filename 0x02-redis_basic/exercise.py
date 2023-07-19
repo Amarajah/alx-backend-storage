@@ -4,6 +4,7 @@ import redis
 import uuid
 from typing import Union
 
+
 class Cache:
     """store an instance of the Redis client as
     a private variable named _redis
