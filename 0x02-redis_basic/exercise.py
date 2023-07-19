@@ -4,7 +4,7 @@ import redis
 import uuid
 from typing import Union, Callable, Optional, Any
 
-iidef count_calls(method: Callable) -> Callable:
+def count_calls(method: Callable) -> Callable:
     """ to count how many times methods of the Cache class are called """
     key = method.__qualname__
 
@@ -74,3 +74,4 @@ def call_history(method: Callable) -> Callable:
         self._redis.rpush(outputs, str(data))
         return data
     return wrapper
+
