@@ -2,9 +2,9 @@
 """
 Python script that provides some stats about Nginx logs stored in MongoDB
 """
-import pymongo
+from pymongo import MongoClient
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     client = MongoClient('mongodb://127.0.0.1:27017')
     nginx_logs = client.logs.nginx
     # get the number of documents/log stats
@@ -19,7 +19,7 @@ if __name__ = "__main__":
                                              'path': '/status'})
 
 
-    print("{} logs".format(doc_num))
+    print("{} logs".format(docs_num))
     print("Methods:")
     print("\tmethod GET: {}".format(get_num))
     print("\tmethod POST: {}".format(post_num))
